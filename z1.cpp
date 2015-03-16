@@ -10,6 +10,7 @@ int main()
 {
     list <int> li;
     list <int>::iterator id;
+    list <int>::iterator p;
     int n,x;
     while(cin>>n)
     {
@@ -19,8 +20,10 @@ int main()
     cin>>x;
     for(id=li.begin();id!=li.end();id++)
     {
-        if((*id)==x){li.erase(id);id--;}
-    
+        p=(id--);
+        if((*id)==x){li.erase(id);id=p;}
+        
+        id++;
     }
    /* for(id=li.begin();id!=li.end();id++)
     {

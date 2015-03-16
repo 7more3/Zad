@@ -8,18 +8,56 @@
 using namespace std;
 int main()
 {
+    list <int> li1;
+    list <int>::iterator id1;
+     list <int> li2;
+    list <int>::iterator id2;
+     list <int> li;
+    list <int>::iterator id;
+    int n,x,br=0;
+    cin>>x;
+    while(cin>>n&&br!=x)
+    {
+        li1.push_back(n);
+        br++;
+    }
+    cin.clear();
+    br=0;
+    while(cin>>n&&br!=x)
+    {
+        li2.push_back(n);
+        br++;
+    }
+    cin.clear();
+    for(id1=li1.begin(),id2=li2.begin();id1!=li1.end(),id2!=li2.end();id1++,id2++)
+    { 
+    
+       // cout<<"yes";
+        n=(*id1)+(*id2);
+       // cout<<"yes";
+        li.push_back(n);
+       // cout<<"yes";
+    
+    }
+    for(id=li.begin();id!=li.end();id++)
+    {
+        cout<<*id<<" ";
+    }
+}
+/*{
     list <int> li;
     list <int>::iterator id;
-    int n;
+    int n,x;
     while(cin>>n)
     {
         li.push_back(n);
     }
+    cin.clear();
+    cin>>x;
     for(id=li.begin();id!=li.end();id++)
     {
-        n=(*id)*(*id);
-    li.insert(++id,n);
-    id--;
+        if((*id)==x){li.erase(id);id--;}
+    
     }
    /* for(id=li.begin();id!=li.end();id++)
     {
@@ -42,12 +80,13 @@ int main()
     id++;
     li.insert(id,-n);
     */
-    for(id=li.begin();id!=li.end();id++)
+    /*for(id=li.begin();id!=li.end();id++)
     {
         cout<<*id<<" ";
     }
     
 }
+*/
 /*{
     list <int> li;
     list <int>::iterator id;
