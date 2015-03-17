@@ -22,7 +22,6 @@ int main()
     {
         p=(id--);
         if((*id)==x){li.erase(id);id=p;}
-        
         id++;
     }
    /* for(id=li.begin();id!=li.end();id++)

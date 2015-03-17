@@ -5,8 +5,25 @@
 #include<fstream>
 #include<iomanip>
 #include<list>
+#include<stack>
 using namespace std;
 int main()
+{
+    stack<int>st;
+    int n,x,br=0;
+    while(cin>>n)
+    {
+        st.push(n);
+    }
+    cout<<st.size()<<" ";
+    cout<<endl;
+    while(!st.empty())
+    {
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+}
+/*int main()
 {
     list <int> li1;
     list <int>::iterator id1;
@@ -44,6 +61,7 @@ int main()
         cout<<*id<<" ";
     }
 }
+*/
 /*{
     list <int> li;
     list <int>::iterator id;
