@@ -13,16 +13,58 @@ int main()
     int n,x,br=0;
     while(cin>>n)
     {
+       if(n%2!=0) st.push(n);
+       else {st.push(n);st.push(n);}
+    }
+    
+    while(!st.empty())
+    {
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+    
+}
+/*int main()
+{
+    stack<int>st;
+    int n,x,br=0;
+    while(cin>>n)
+    {
         st.push(n);
     }
-    cout<<st.size()<<" ";
+    
+    st.pop();
+    st.pop();
+    st.pop();
+    cout<<st.top();
     cout<<endl;
     while(!st.empty())
     {
         cout<<st.top()<<" ";
         st.pop();
     }
+    
+}*/
+/*int main()
+{
+    stack<int>st;
+    int n,x,br=0;
+    while(cin>>n)
+    {
+        st.push(n);
+    }
+    cin.clear();
+    while(cin>>n)
+    {
+        st.push(n);
+    }
+    while(!st.empty())
+    {
+        cout<<st.top()<<" ";
+        st.pop();
+    }
 }
+*/
 /*int main()
 {
     list <int> li1;
