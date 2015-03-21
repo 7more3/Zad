@@ -10,6 +10,25 @@ using namespace std;
 int main()
 {
     stack<int>st;
+    int n,br=0,min;
+    double x=0;
+    while(cin>>n)
+    {
+       st.push(n);
+       x=x+n;
+       br++;
+    }
+    min=st.top();
+    while(!st.empty())
+    {
+        if(st.top()<min)min=st.top();
+        st.pop();
+    }
+    cout<<x<<" "<<x/br<<" "<<min;
+}
+/*int main()
+{
+    stack<int>st;
     int n,x,br=0;
     while(cin>>n)
     {
@@ -23,7 +42,7 @@ int main()
         st.pop();
     }
     
-}
+}*/
 /*int main()
 {
     stack<int>st;
