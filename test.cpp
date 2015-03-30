@@ -10,6 +10,197 @@ using namespace std;
 int main()
 {
     stack<int>st;
+    int n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>n;
+    while(n!=0)
+    {   st.push(n%10);
+        n=n/10;
+    }
+    while(!st.empty())
+    {
+        if(st.top()%2==0)b=b*10+st.top();
+        else c=c*10+st.top();
+        st.pop();
+    }
+    cout<<b<<" "<<c;
+}
+/*
+int main()
+{
+    stack<int>st;
+    int n,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>n;
+    while(n!=0)
+    {   st.push(n%10);
+        n=n/10;
+    }
+    while(!st.empty())
+    {
+        b=b*10+st.top();
+        if(!st.empty())st.pop();
+        if(!st.empty())st.pop();
+        //st.pop();
+    }
+    cout<<b;
+}*/
+/*int main()
+{
+    stack<char>st;
+    int n,br=3,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>n;
+    while(n!=0)
+    {   a=n%16;
+        if(a==16)st.push('g');
+        if(a==15)st.push('f');
+        if(a==14)st.push('e');
+        if(a==13)st.push('d');
+        if(a==12)st.push('c');
+        if(a==11)st.push('b');
+        if(a==10)st.push('a');
+        if(a>=0 && a<=9)st.push('0'+a);
+        n=n/16;
+    }
+    while(!st.empty())
+    {
+        
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+}*/
+/*int main()
+{
+    stack<int>st;
+    int n,br=3,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>n;
+    while(n!=0)
+    {
+        st.push(n%2);
+        n=n/2;
+    }
+    while(!st.empty())
+    {
+        
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+}*/
+/*int main()
+{
+    stack<char>st;
+    stack<char>st1;
+    stack<char>st2;
+    int n,br=3,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    getline(cin,s);
+    for(int i=0;i<s.size();i++)
+    {
+        st.push(s[i]);
+    }
+    
+    //cout<<st1.top();
+    while(!st.empty())
+    {
+        cout<<" b "<<st.top()<<endl;
+        if(st.top()=='`'){st.pop();st.pop();st.pop();}
+       st2.push(st.top()); st.pop();
+    }
+    
+    /*while(!st.empty())
+    {
+        st2.push(st.top());
+        st.pop();
+    }
+    while(!st.empty())
+    {
+        
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+    //kop - kad`osd`pds`
+    
+}*/
+/*int main()
+{
+    stack<char>st;
+    stack<char>st1;
+    stack<char>st2;
+    int n,br=3,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    getline(cin,s);
+    for(int i=0;i<s.size();i++)
+    {
+        st.push(s[i]);
+    }
+  
+    //cout<<st1.top();
+    while(!st.empty())
+    {
+        cout<<" b "<<st.top()<<endl;
+        if(st.top()=='`'){st.pop();st.pop();st.pop();}
+       st2.push(st.top()); st.pop();
+    }
+    
+    while(!st2.empty())
+    {
+        
+        cout<<st2.top()<<" ";
+        st2.pop();
+    }
+    //kop - kad`osd`pds`
+    
+}*/
+/*
+int main()
+{
+    stack<char>st;
+    int n,br=3,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    getline(cin,s);
+    for(int i=0;i<s.size();i++)
+    {
+        if(br==0)st.push(s[i]),br=3;
+        else br--;
+    }
+    while(!st.empty())
+    {
+        
+        cout<<st.top()<<" ";
+        st.pop();
+    }
+}*/
+//asdapeyr xyiso pgp3mf fodlfk
+/*int main()
+{
+    stack<int>st;
+    int n,br=0,min,a,a1,a2;
+    double x=0;
+    for(int i=100;i<1000;i++)
+    {
+        a=i%10;
+        a1=i/10%10;
+        a2=i/100;
+        if((a+a1+a2)==10)st.push(i);
+    }
+    while(!st.empty())
+    {
+        cout<<st.top()<<endl;
+        st.pop();
+    }
+}*/
+/*int main()
+{
+    stack<int>st;
     int n,br=0,min;
     double x=0;
     while(cin>>n)
@@ -25,7 +216,7 @@ int main()
         st.pop();
     }
     cout<<x<<" "<<x/br<<" "<<min;
-}
+}*/
 /*int main()
 {
     stack<int>st;
