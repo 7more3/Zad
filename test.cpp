@@ -6,8 +6,311 @@
 #include<iomanip>
 #include<list>
 #include<stack>
+#include<queue>
 using namespace std;
 int main()
+{
+    queue<int>st;
+    queue<int>st2;
+    queue<int>st3;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss,sss;
+    
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    int x[st.size()];
+    //n=st.front();
+    while(!st.empty())
+    {
+        x[b]=st.front(),b++;
+        st.pop();
+    }
+    sort(x,x+b);
+    for(int i=0;i<b;i++)
+    {
+        st.push(x[i]);
+    }
+    while(!st.empty())
+    {
+        cout<<st.front()<<" ";
+        st.pop();
+    }
+    cout<<endl;
+    
+}
+/*int main()
+{
+    queue<int>st;
+    queue<int>st2;
+    queue<int>st3;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss,sss;
+    int x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    n=st.front();
+    while(!st.empty())
+    {
+        if(st.front()>0)st2.push(st.front());
+        else  st3.push(st.front());
+        st.pop();
+    }
+    while(!st2.empty())
+    {
+        cout<<st2.front()<<" ";
+        st2.pop();
+    }
+    cout<<endl;
+    while(!st3.empty())
+    {
+        cout<<st3.front()<<" ";
+        st3.pop();
+    }
+}*/
+/*int main()
+{
+    queue<int>st;
+    queue<int>st2;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss,sss;
+    int x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    n=st.front();
+    while(!st.empty())
+    {
+        
+        st2.push(st.front());
+        if(!st.empty())st.pop();
+        if(!st.empty())st.pop();
+    }
+    while(!st2.empty())
+    {
+        cout<<st2.front()<<" ";
+        st2.pop();
+    }
+
+
+}*/
+/*int main()
+{
+    queue<int>st;
+    queue<int>st2;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss,sss;
+    int x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    n=st.front();
+    while(!st.empty())
+    {
+        
+        st2.push(st.front());
+        st2.push(st.front()-st.front()-st.front());
+        st.pop();
+    }
+    while(!st2.empty())
+    {
+        cout<<st2.front()<<" ";
+        st2.pop();
+    }
+
+
+}*/
+/*int main()
+{
+    queue<int>st;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss,sss;
+    int x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    n=st.front();
+    st.pop();
+    //c=st.size();
+    while(!st.empty())
+    {
+        
+        if(n>=st.front()){x++;break;}
+        else
+        {
+            n=st.front();
+        }
+        st.pop();
+    }
+    if(x==0)cout<<"Podredena";
+    else cout<<"NEpodredena";
+
+}*/
+/*int main()
+{
+    queue<double>st;
+    long long n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    n=0;
+    c=st.size();
+    while(!st.empty())
+    {
+        b++;
+        n=n+st.front()*pow(10,c-b);
+        st.pop();
+    }
+    cout<<n;
+}*/
+/*int main()
+{
+    queue<double>st;
+    double n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    min==st.front();
+    while(!st.empty())
+    {
+        if(st.front()<min)min=st.front();
+        st.pop();
+    }
+    cout<<min;
+}*/
+/*int main()
+{
+    queue<double>st;
+    double n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>x;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    while(!st.empty())
+    {
+        b++;
+        if(st.front()==x)cout<<"na #"<<b<<" ",c++;
+        st.pop();
+    }
+    if(c==0)cout<<"nqma "<<x<<"v tazi opashka";
+}*/
+/*int main()
+{
+    queue<double>st;
+    double n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>x;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    while(!st.empty())
+    {
+        if(st.front()<=x)b++;
+        st.pop();
+    }
+    cout<<b;
+}*/
+/*int main()
+{
+    queue<double>st;
+double n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    cout<<fixed<<setprecision(2)<<st.front();
+    b=st.front();
+    st.pop();
+    while(!st.empty())
+    {
+        
+        cout<<" + "<<fixed<<setprecision(2)<<st.front();
+        b=b+st.front();
+        st.pop();
+    }
+    cout<<" = "<<b;
+}*/
+
+/*int main()
+{
+    queue<int>st;
+    int n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    cin>>n;
+    for(int i=100;i<1000;i++)
+    {
+        a=i%10;
+        a1=i/10%10;
+        a2=i/10/10%10;
+        if(a+a1+a2==n)st.push(i);
+    }
+    min=st.size();
+    while(!st.empty())
+    {
+        cout<<st.front()<<" ";
+        st.pop();
+    }
+    cout<<endl<<min<<endl;
+}*/
+
+/*int main()
+{
+    queue<char>st;
+    char n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    while(!st.empty())
+    {
+        cout<<char(st.front()-32)<<" ";
+        st.pop();
+    }
+}*/
+/*int main()
+{
+    queue<int>st;
+    int n,c=0,b=0,min,a,a1,a2;
+    string s,ss;
+    double x=0;
+    while(cin>>n)
+    {   
+        st.push(n);
+    }
+    cin.clear();
+    cin>>a>>a1;
+    st.push(a),st.push(a1);
+    st.pop(),st.pop();
+    cout<<st.size()<<endl;
+    while(!st.empty())
+    {
+        cout<<st.front()<<" ";
+        st.pop();
+    }
+}*/
+/*int main()
 {
     stack<int>st;
     int n,c=0,b=0,min,a,a1,a2;
@@ -25,7 +328,7 @@ int main()
         st.pop();
     }
     cout<<b<<" "<<c;
-}
+}*/
 /*
 int main()
 {
