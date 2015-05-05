@@ -10,36 +10,64 @@
 using namespace std;
 int main()
 {
-    queue<int>st;
-    queue<int>st2;
-    queue<int>st3;
+    queue<char>st;
     long long n,c=0,b=0,min,a,a1,a2;
-    string s,ss,sss;
+    double s=0;
+char x;
+    string ss,sss;
     
-    while(cin>>n)
+    while(cin>>x)
     {   
-        st.push(n);
-    }
-    int x[st.size()];
-    //n=st.front();
-    while(!st.empty())
-    {
-        x[b]=st.front(),b++;
-        st.pop();
-    }
-    sort(x,x+b);
-    for(int i=0;i<b;i++)
-    {
-        st.push(x[i]);
+        st.push(x);
     }
     while(!st.empty())
     {
-        cout<<st.front()<<" ";
+        if(st.front()>64&&st.front()<91)b++;
+        else if(st.front()>='0'&&st.front()<='9')c++;
+        else s++;
         st.pop();
     }
+    cout<<"Glavni bukvi "<<b<<" malki bukvi "<<s<<" 4isla "<<c;
+    
     cout<<endl;
     
 }
+/*struct stud
+{
+    int nomer;
+    string ime;
+    double usp;
+};
+int main()
+{
+    queue<stud>st;
+    queue<stud>st2;
+    queue<stud>st3;
+    long long n,c=0,b=0,min,a,a1,a2;
+    double s=0;
+    stud x;
+    string ss,sss;
+    
+    while(cin>>x.nomer)
+    {   
+        cin.get();
+        getline(cin,x.ime);
+        cin>>x.usp;
+        st.push(x);
+    }
+    while(!st.empty())
+    {
+        x=st.front();
+        cout<<setw(5)<<left<<x.nomer<<setw(30)<<x.ime<<right<<setw(5)<<fixed<<setprecision(2)<<x.usp<<endl;
+        b++;
+        s=x.usp+s;
+        st.pop();
+    }
+    cout<<"Sr.uspech "<<fixed<<setprecision(2)<<s/b<<endl;
+    
+    cout<<endl;
+    
+}*/
 /*int main()
 {
     queue<int>st;
