@@ -13,7 +13,12 @@
 //p - na4alen okazatel
 //q - kraen okazatel
 using namespace std;
-void put(int x,Queue *&p,Queue *&p)
+struct Queue
+{
+    int data;
+    Queue *link;
+};
+void put(int x,Queue *&p,Queue *&q)
 {
     Queue *r = new Queue;
     r->data = x;
@@ -22,7 +27,7 @@ void put(int x,Queue *&p,Queue *&p)
     else q->link = r;
     q = r;
 }
-void pop(Queue *&p,Queue *&p)
+void pop(Queue *&p,Queue *&q)
 {
     if(p!=NULL)
     {
@@ -38,7 +43,7 @@ int main()
 {
     Queue *p=NULL,*q=NULL;
     int x,s=0;
-    while(cin>>x)put(x,p,q)
+    while(cin>>x)put(x,p,q);
     while(p!=NULL)
     {
         s=s+p->data;

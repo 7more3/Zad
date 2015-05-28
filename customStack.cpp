@@ -12,6 +12,7 @@
 //x - 4islo
 //p - na4alen okazatel
 using namespace std;
+int s[500000000];
 struct Stack
 {
     int data;
@@ -22,7 +23,7 @@ void put(int x,Stack *&p)
     Stack *q = new Stack;
     q->data = x;
     q->link = p;
-    q = r;
+    q = p;
 }
 void pop(Queue *&p,Queue *&p)
 {

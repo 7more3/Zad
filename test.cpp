@@ -7,8 +7,95 @@
 #include<list>
 #include<stack>
 #include<queue>
+#include<set>
 using namespace std;
 int main()
+{
+    set<int>m;
+    set<int>::iterator it;
+    set<int>::iterator it1;
+    int a,b,br=0;
+    cin>>a>>b;
+    if(a%2!=0)a++;
+    for(int k=a;k<=b;k=k+2)
+        m.insert(k),br++;
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+    cout<<endl;
+    it=m.begin();
+    for(it=m.begin();it!=m.end();it++)
+    {
+        cout<<" his ";
+        if(*it%3==0)
+        {
+            cout<<" hi ";
+            it1=it;
+            it--;
+            m.erase(it1);
+            
+            
+        }
+        cout<<" his "<<endl;
+    }
+    /*while(it!=m.end())
+    {
+    it1=it++;
+    if(*it%3==0)m.erase(it),it=it1,it++;
+    }*/
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+    cout<<endl<<br;
+}
+/*int main() //zad1 ot 4as
+{
+    set<int>m;
+    set<int>::iterator it;
+    int a,b,br=0;
+    cin>>a>>b;
+    if(a%2!=0)a++;
+    for(int k=a;k<=b;k=k+2)
+        m.insert(k),br++;
+    
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+    cout<<endl<<br;
+}*/
+/*int main() zad6
+{
+    set<int>m;
+    set<int>::iterator it;
+    int b=0;
+    for(int k=1;b<30;k=2*k+1)
+        m.insert(k),b++;
+    
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+}*/
+/*int main() // zad5
+{
+    set<int>m;
+    set<int>::iterator it;
+    for(int k=1;k<1001;k=2*k+1)
+        m.insert(k);
+    
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+}*/
+/*int main()
+{
+    set<int>m;
+    set<int>::iterator it;
+    int s;
+    while(cin>>s)
+    {
+        m.insert(s);
+    }
+    it=m.begin();
+    m.erase(it);
+    for(it=m.begin();it!=m.end();it++)
+    cout<<*it<<" ";
+}*/
+/*int main()
 {
     queue<char>st;
     long long n,c=0,b=0,min,a,a1,a2;
@@ -31,7 +118,7 @@ char x;
     
     cout<<endl;
     
-}
+}*/
 /*struct stud
 {
     int nomer;
