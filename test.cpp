@@ -12,6 +12,70 @@ using namespace std;
 int main()
 {
     set<int>m;
+    set<int>n;
+    set<int>nm;
+    set<int>::iterator it;
+    set<int>::iterator it1;
+    string s;
+    int is=0,js=0;
+    for(int i=1 ;i<=50;i=i+3)
+    m.insert(i);
+    for(int i=1 ;i<=50;i=i+5)
+    n.insert(i);
+    for(it=m.begin();it!=m.end();it++)
+    nm.insert(*it),cout<<*it<<" ";
+    cout<<endl;
+    for(it=n.begin();it!=n.end();it++)
+    nm.insert(*it),cout<<*it<<" ";
+    cout<<endl;
+    for(it=nm.begin();it!=nm.end();it++)
+    cout<<*it<<" ";
+    cout<<endl;
+    for(it=nm.begin();it!=nm.end();it++)
+    {
+        it1=it;
+        it1--;
+        if(n.count(*it)!=0){nm.erase(it);it=it1;}
+       
+    }
+    for(it=nm.begin();it!=nm.end();it++)
+    cout<<*it<<" ";
+    cout<<endl;
+}
+/*int main()
+{
+    set<string>m;
+    set<string>::iterator it;
+    set<string>::iterator it1;
+    string s;
+    ifstream ifile;
+    ifile.open("input.txt",ios::in);
+    while(ifile>>s)
+    {
+        
+        m.insert(s);
+    }
+    cout<<m.size()<<" krai ";
+}*/
+/*int main()
+{
+    set<string>m;
+    set<string>::iterator it;
+    set<string>::iterator it1;
+    string s;
+    int ds;
+    ifstream ifile;
+    ifile.open("input.txt",ios::in);
+    while(ifile>>s)
+    {
+        
+        m.insert(s);
+    }
+    cout<<m.size()<<" krai ";
+}*/
+/*int main()//zad 
+{
+    set<int>m;
     set<int>::iterator it;
     set<int>::iterator it1;
     int a,b,br=0;
@@ -37,15 +101,10 @@ int main()
         }
         cout<<" his "<<endl;
     }
-    /*while(it!=m.end())
-    {
-    it1=it++;
-    if(*it%3==0)m.erase(it),it=it1,it++;
-    }*/
     for(it=m.begin();it!=m.end();it++)
     cout<<*it<<" ";
     cout<<endl<<br;
-}
+}*/
 /*int main() //zad1 ot 4as
 {
     set<int>m;
